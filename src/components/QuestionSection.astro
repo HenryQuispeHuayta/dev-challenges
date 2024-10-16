@@ -1,0 +1,30 @@
+---
+import type { QuestionType } from '../types/question.type';
+
+interface Props {
+  question: QuestionType;
+}
+
+const { question } = Astro.props;
+---
+
+<section>
+  <h2>{question.question}</h2>
+  <p>{question.description}</p>
+  {
+    question.unorderList ? (
+      <ul>
+        {question.steps.map((step) => (
+          <li>{step}</li>
+        ))}
+      </ul>
+    ) : (
+      <ol>
+        {question.steps.map((step) => (
+          <li>{step}</li>
+        ))}
+      </ol>
+    )
+  }
+  <p>{question.moreInfo}</p>
+</section>
