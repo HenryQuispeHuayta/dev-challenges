@@ -1,4 +1,5 @@
 ---
+import QuestionSection from "../components/QuestionSection.astro";
 import Layout from "../layouts/Layout.astro";
 ---
 
@@ -11,44 +12,7 @@ import Layout from "../layouts/Layout.astro";
       <h1>Frequently Asked Questions</h1>
       <p>Browse through the most frequently asked questions</p>
     </div>
-    <section>
-      <article>
-        <h2>How can I track my order?</h2>
-        <p>You can track your order using the following steps:</p>
-        <ol>
-          <li>Go to the Order <a href="#">Tracking page</a>.</li>
-          <li>Enter your order number and email address.</li>
-          <li>
-            Click on the Track Order button to view the current status of your
-            shipment.
-          </li>
-        </ol>
-        <p>If you encounter any issues, please visit our <a href="#">Help Center</a>.</p>
-      </article>
-			<hr />
-      <article>
-        <h2>What is your return policy?</h2>
-        <p>
-          We offer a 30-day return policy on most items. Here are some key
-          points:
-        </p>
-        <ul>
-          <li>
-            <strong>Items must be in original condition</strong>: Unworn,
-            unused, and unwashed.
-          </li>
-          <li>
-            <strong>Include original packaging and tags</strong>: All items
-            should be returned with their original packaging and tags.
-          </li>
-          <li>
-            <strong>Proof of purchase</strong>: A receipt or proof of purchase
-            is required.
-          </li>
-        </ul>
-        <p>For more detailed information, read our full <a href="#">Return Policy</a>.</p>
-      </article>
-    </section>
+    <QuestionSection />
   </main>
 </Layout>
 
@@ -56,41 +20,9 @@ import Layout from "../layouts/Layout.astro";
 	div {
 		text-align: center;
 	}
-	a {
-		color: #4E80EE;
-		text-decoration: none;
-
-	}
-	section {
-		display: grid;
-		gap: 2rem;
-		background-color: #F8FAFC;
-		padding: 32px 300px;
-		margin-top: 48px;
-		
-	}
-	h1 {
-		font-size: 2.25rem;
-		margin-bottom: 16px;
-		line-height: 1;
-	}
-	h2 {
-		font-size: 1.5rem;
-	}
-	hr {
-		border: 1px solid #D2D5DA;
-    margin:  0;
-	}
-	@media screen and (max-width: 1024px) {
-		section {
-			padding: 32px 36px;
-		}
-		
-	}
-	@media screen and (max-width: 640px) {
-		section {
-			padding: 32px 16px;
-		}
-		
-	}
+  h1 {
+    font-size: 2.25rem;
+    margin-bottom: 16px;
+    line-height: 1;
+  }
 </style>
